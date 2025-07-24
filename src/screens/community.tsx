@@ -12,6 +12,7 @@ import { fetchCommunityRequest } from '../slices/communitySlice';
 import { AppDispatch, RootState } from '../store/types'; 
 import { useDispatch, useSelector } from 'react-redux';
 import ListCommunityCell from '../components/listCommunityCell';
+import ListFooter from '../components/listFooterCell';
 
 const CommunityScreens = () => {
     const router = useRouter();
@@ -107,8 +108,3 @@ const styles = StyleSheet.create({
 
 export default CommunityScreens;
 
-const ListFooter = ({ loading, hasMore }: { loading: boolean; hasMore: boolean }) => {
-  if (loading) return <ActivityIndicator size="small" style={{ margin: 16 }} />;
-  if (!hasMore) return <Text style={{ textAlign: 'center', padding: 16 }}>No more data</Text>;
-  return null;
-};

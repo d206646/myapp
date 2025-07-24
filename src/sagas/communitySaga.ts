@@ -4,15 +4,7 @@ import {
   fetchCommunityRequest, fetchCommunitySuccess, fetchCommunityFailure
 } from '../slices/communitySlice';
 import { fetchCommunityApi } from '../api/communityService';
-import { FetchCommunityPayload } from '../types';
-export type Community = {
-  community_id: number;
-  community_username: string;
-  community_name: string;
-  description: string;
-  avatar: string;
-  banner: string;
-};
+import { Community, FetchCommunityPayload } from '../types';
 
 
 // const getItems = state => state.community;

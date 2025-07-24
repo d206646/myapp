@@ -6,12 +6,13 @@ import {
   Image,
   TouchableOpacity,
 } from 'react-native';
+import CustomImage from './CustomImage';
 
 const ListCommunityCell = ({item,onCellPress}:any) => {
     
   return (
               <View style={styles.userRow} >
-                <Image source={item.avatar} style={styles.avatar} />
+                 <CustomImage imageUrl={item.avatar} isAvatar={true}/>
                 <View style={styles.userInfo}>
                   <Text style={styles.name}>{item.community_name}</Text>
                   <Text style={styles.username}>{item.community_username}</Text>

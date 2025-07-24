@@ -1,16 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { FetchCommunityPayload } from '../types';
-import { Community } from '../sagas/communitySaga';
-
-type CommunityState = {
-  status: 'idle' | 'loading' | 'success' | 'error';
-  data: Community[];
-  loading: boolean;
-  error: string | null;
-  page: number;
-  limit: number;
-  totalCount: number;
-};
+import { CommunityState, FetchCommunityPayload } from '../types';
 
 const initialState:CommunityState= {
         status: 'idle',
@@ -22,7 +11,7 @@ const initialState:CommunityState= {
         totalCount: 0,
       }
     const communitySlice = createSlice({
-      name: 'user',
+      name: 'community',
       initialState: initialState,
       reducers: {
         fetchCommunityRequest: (state,_action: PayloadAction<FetchCommunityPayload>) => {
